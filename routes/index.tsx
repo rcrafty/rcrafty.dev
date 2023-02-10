@@ -17,7 +17,7 @@ export default function Home(props: PageProps) {
       <Navbar />
       <main class="grid lg:grid-cols-4 lg:grid-rows-4 lg:grid-flow-col gap-4">
         <aside class="row-span-4">
-          <h1 class="text-4xl font-bold text-blue-500">
+          <h1 class="text-4xl font-bold text-blue-600">
             Roberto
             <br />
             Toalongo
@@ -27,13 +27,13 @@ export default function Home(props: PageProps) {
             </span>
           </h1>
           <br />
-          <p class="text-xl text-blue-500">
+          <p class="text-xl text-blue-600">
             Desarrollador en sitios webs y aplicaciones moviles
           </p>
         </aside>
 
         <section class="col-span-3">
-          <h2 class="text-xl font-bold text-blue-500 px-3">Skills</h2>
+          <h2 class="text-xl font-bold text-blue-600 px-3">Skills</h2>
           <div class="grid grid-flow-col py-2 px-3">
             <img class="w-12" src="/github-svgrepo-com.svg" alt="css-logo" />
             <img class="w-12" src="/html-svgrepo-com.svg" alt="css-logo" />
@@ -53,21 +53,24 @@ export default function Home(props: PageProps) {
         </section>
 
         <section class="row-span-2 col-span-2">
-          <h2 class="text-xl font-bold px-3 text-blue-500">Últimos articulos</h2>
+          <h2 class="text-xl font-bold px-3 text-blue-600">
+            Últimos articulos
+          </h2>
           {posts.map((post: Post) => (
             <a href={`/blog/${post.id}`}>
               <article class="rounded-lg hover:bg-blue-50 py-2 px-3">
                 <h2 class="text-xl font-medium">{post.title}</h2>
-                <time class="text-blue-500 text-sm">
+                <time class="text-blue-600 text-sm">
                   {Intl.DateTimeFormat("es", { dateStyle: "long" }).format(
-                    post.date
+                    post.date,
                   )}
                 </time>
               </article>
             </a>
           ))}
         </section>
-        {/*
+        {
+          /*
         <section class="row-span-2 col-span-3">
           <h2 class="text-xl font-bold text-red-900 px-3">
             Últimos proyectos
@@ -79,7 +82,8 @@ export default function Home(props: PageProps) {
           </a>
         </section>
 
-          */}
+          */
+        }
       </main>
 
       <footer></footer>
