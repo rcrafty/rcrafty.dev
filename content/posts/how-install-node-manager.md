@@ -10,43 +10,41 @@ Un gestor de versiones de Node es una herramienta que permite a los desarrollado
 
 Hay varios gestores de versiones de Node disponibles como: 
 
-- [Node version Manager (nvm)](#install-nvm) 
-- [Fast Node Manager (fnm)](#install-fnm)
+- [Node version Manager (nvm)](https://github.com/nvm-sh/nvm) 
+- [Fast Node Manager (fnm)](#https://github.com/Schniz/fnm)
 
-## Install nvm 
+En lo personal yo prefiero usar **fnm** ya que practicamente es una mejora a **nvm**
 
-#### Using Curl
-`` 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-``
+## Fast node Manager (fnm)
 
-#### Using Wget
-`` 
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-``
+### About
 
-## Install fnm
+**fnm** es un administrador de versiones de node.js, funciona igual que **nvm**, pero fnm es mas rapido gracias a que esta escrito con el lenguaje de programacion rust, ademas su instalación es mas facil que **nvm**.
 
-### Using a script (macOS/Linux)
+### Install fnm
 
-`` 
-curl -fsSL https://fnm.vercel.app/install | bash
-``
+#### Using a script (macOS/Linux)
 
-### Manually
+<pre>
+<code>curl -fsSL https://fnm.vercel.app/install | bash</code>
+</pre>
 
 #### Using Homebrew (macOS/Linux)
-`` 
-brew install fnm
-``
+
+<pre>
+<code>brew install fnm</code>
+</pre>
 
 #### Usando Chocolatey (Linux/macOS/Windows)
-`` 
-choco install fnm
-``
+
+<pre>
+<code>choco install fnm</code>
+</pre>
+
 #### Usando Cargo (Linux/macOS/Windows)
-`` 
-cargo install fnm
-`` 
+
+<pre>
+<code>cargo install fnm</code>
+</pre>
 
 
