@@ -4,7 +4,7 @@ const links = [
     to: "/",
   },
   {
-    label: "Sobre mi",
+    label: "About",
     to: "/p/sobre-mi",
   },
   {
@@ -23,7 +23,10 @@ function Navbar() {
       <ul class="flex justify-center">
         {links.map(({ label, to }) => (
           <li key={to}>
-            <a class="text-lg p-4 font-medium" href={to}>
+            <a
+              class="p-2 text-sm font-medium transition hover:ring-2 ring-black rounded-lg w-1/4 mx-2"
+              href={to}
+            >
               {label}
             </a>
           </li>
