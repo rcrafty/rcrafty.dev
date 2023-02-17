@@ -13,7 +13,7 @@ export const handler: Handlers = {
 function PagePost(props: PageProps) {
   const { post } = props?.data || {};
   return (
-    <div class="mt-2 p-4">
+    <div class="p-2">
       <Layout>
         <div class="flex justify-center px-0">
           <article class="w-[48rem]">

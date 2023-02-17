@@ -13,7 +13,7 @@ export const handler: Handlers = {
 function PagePost(props: PageProps) {
   const { post } = props?.data || {};
   return (
-    <div class="mt-2 p-4">
+    <div class="p-2">
       <Layout>
         <div class="flex justify-center px-0">
           <article class="w-[48rem]">
@@ -21,7 +21,7 @@ function PagePost(props: PageProps) {
               <h1 class="text-3xl font-bold">{post.title}</h1>
               <time class="text-blue-600 text-sm">
                 {Intl.DateTimeFormat("es", { dateStyle: "long" }).format(
-                  post.date,
+                  post.date
                 )}
               </time>
             </header>

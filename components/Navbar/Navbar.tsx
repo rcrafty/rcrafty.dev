@@ -19,7 +19,7 @@ const links = [
 
 function Navbar() {
   return (
-    <nav class="mb-4 p-4">
+    <nav class="mb-4 p-6">
       <ul class="flex justify-center">
         {links.map(({ label, to }) => (
           <li key={to}>
