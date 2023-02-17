@@ -56,7 +56,7 @@ function Skill() {
     <div class="flex flex-wrap py-2 px-3 gap-2">
       {skills.map(({ skill, source }, i) => (
         <div key={i}>
-          <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg flex-row hover:bg-gray-100">
+          <div className="flex flex-col items-center bg-white border-2 border-gray-200 rounded-lg flex-row">
             <i className="p-2">
               <img class="w-8" src={source} alt="css-logo" />
             </i>
