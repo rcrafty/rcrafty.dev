@@ -1,13 +1,10 @@
 import { Options } from "$fresh/plugins/twind.ts";
 import { apply } from "twind";
-import presetAutoprefix from "https://cdn.skypack.dev/@twind/preset-autoprefix";
-import presetTypography from "https://cdn.skypack.dev/@twind/preset-typography";
 import typography from "https://cdn.skypack.dev/@twind/typography";
 
 export default {
   selfURL: import.meta.url,
   darkMode: "class",
-  presets: [presetAutoprefix(), presetTypography()],
   theme: {
     extend: {
       colors: {

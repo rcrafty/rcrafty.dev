@@ -1,10 +1,10 @@
 import type { Project } from "../types.d.ts";
 import { extract } from "$std/encoding/front_matter/any.ts";
-import { unified } from "npm:unified";
-import remarkParse from "npm:remark-parse";
-import remarkRehype from "npm:remark-rehype";
-import rehypeStringify from "npm:rehype-stringify";
-import remarkGfm from "npm:remark-gfm";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import remarkGfm from "remark-gfm";
 
 
 export async function loadProject(id: string): Promise<Project | null> {

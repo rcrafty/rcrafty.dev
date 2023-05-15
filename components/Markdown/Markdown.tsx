@@ -1,4 +1,4 @@
-import { FunctionComponent } from "https://esm.sh/v102/preact@10.11.0/src/index";
+import { FunctionComponent } from "preact";
 interface Props {
   body: string;
 }

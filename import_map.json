@@ -2,6 +2,11 @@
   "imports": {
     "refractor": "https://esm.sh/refractor@4.8.0",
     "refractor/": "https://esm.sh/refractor@4.8.0/",
+    "unified": "https://esm.sh/unified@10.1.2",
+    "remark-parse": "https://esm.sh/remark-parse@10.0.1",
+    "remark-rehype": "https://esm.sh/remark-rehype@10.1.0",
+    "rehype-stringify": "https://esm.sh/rehype-stringify@9.0.3",
+    "remark-gfm": "https://esm.sh/remark-gfm@3.0.1",
     "$fresh/": "https://deno.land/x/fresh@1.1.2/",
     "$std/": "https://deno.land/std@0.168.0/",
     "$gfm/": "https://deno.land/x/gfm@0.2.1/",
