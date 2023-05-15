@@ -1,16 +1,17 @@
 ---
-title: Tell, Don't Ask 
+title: Tell, Don't Ask, un principio de la programación orientada a objetos
 date: 2023-02-16
 excerpt: This is my post about tell don't ask
+tags: 
+- java
 ---
 
-**Tell, Don't Ask** es un principio de la programación orientada a objetos, se dice que el principio quiere decir que no usemos los getters y setters, pero en verdad lo que dice es que no abusemos de estos metodos, entonces para **"No usar getters y setters"** tendriamos que agrupar datos con las funciones que operan en esos datos.
+**Tell, Don't Ask** es un principio de la programación orientada a objetos, se trata de que no usar getters y setters mediante un objeto, con eso no quiero decir que debas de dejar de crear estos metodos, si no que debes de darle un mejor uso y lo cual mejorara la calidad de tu código 
 
-La traducción de **Tell, don't ask** significa **Dilo, no preguntes**, "No preguntes" quiere decir que no pidamos a un objeto los getters y setters para actuar sobre datos, entonces por eso porque mejor simplemente decimos como actuar sobre los datos dentro de la misma clase de los getters y setters, de este modo solo escribiriamos una funcion que opere con los datos y asi simplemente diriamos que queremos del objeto, y asi se aplicaria el "Dilo" de este principio
+La traducción de **Tell, don't ask** significa **Dilo, no preguntes**, "No preguntes" quiere decir que no pidamos a un objeto los getters y setters para actuar sobre datos, cuando mejor podriamos decir mediante un metodo como van a actuar los datos dentro de la misma clase en la que estan definidos los getters y setters, asi simplemente traeriamos del objeto un metodo que nos entrege un resultado, de esta manera se aplicaria el "Dilo" del principio
 
 #### Ejemplo sin aplicar el principio de Tell, don't ask
-<pre tabindex="0">
-<code data-lang="java">public class Cuadrado 
+```
 {
   private int longitud;
 
@@ -22,10 +23,9 @@ La traducción de **Tell, don't ask** significa **Dilo, no preguntes**, "No preg
   {
     this.longitud = longitud;
   }
-}</code>
-</pre>
-<pre tabindex="0">
-<code data-lang="java">public class Program
+}
+```
+```
 {
     public static void main(String[] args) {
         Cuadrado ob = new Cuadrado();
@@ -33,12 +33,11 @@ La traducción de **Tell, don't ask** significa **Dilo, no preguntes**, "No preg
         System.out.println(4*ob.getLongitud());
 	}
 
-}</code>
-</pre>
+}
+```
 
 #### Ejemplo aplicando el principio de Tell, don't ask
-<pre tabindex="0">
-<code data-lang="java">public class Cuadrado 
+```
 {
   private int longitud;
 
@@ -54,10 +53,9 @@ La traducción de **Tell, don't ask** significa **Dilo, no preguntes**, "No preg
   public void area(int longitud){
     System.out.println(4*longitud);
   }
-}</code>
-</pre>
-<pre tabindex="0">
-<code data-lang="java">public class Program
+}
+```
+```
 {
   public static void main(String[] args) {
     Cuadrado ob = new Cuadrado();
@@ -65,9 +63,6 @@ La traducción de **Tell, don't ask** significa **Dilo, no preguntes**, "No preg
   }
 
 }
-</code>
-</pre>
+```
 
-En conclusión **Tell, don't ask** este es un principio que nos permite mejorar nuestro código y incluso discutiblemente la seguridad del mismo, este principio se puede sacar provecho en el desarrollo de aplicaciones grandes ya que podremos encuentrar los datos y su comportamiento en una misma clase 
-
-
+En conclusión **Tell, don't ask** ees un principio clave en la programación orientada a objetos que puede ayudarnos a escribir un código más claro, eficiente y fácil de mantener, al seguir este principio, podemos minimizar la cantidad de comunicación entre objetos, reducir la complejidad y aumentar la cohesión en nuestro código. También podemos mejorar la reutilización de nuestro código, ya que los objetos pueden ser más fácilmente adaptados y reutilizados en diferentes contextos
