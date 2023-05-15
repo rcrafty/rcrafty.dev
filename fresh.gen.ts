@@ -4,14 +4,15 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/_404.tsx";
-import * as $1 from "./routes/_app.tsx";
-import * as $2 from "./routes/api/joke.ts";
-import * as $3 from "./routes/blog/[id].tsx";
-import * as $4 from "./routes/blog/index.tsx";
-import * as $5 from "./routes/index.tsx";
-import * as $6 from "./routes/p/[id].tsx";
-import * as $7 from "./routes/proyectos/[id].tsx";
-import * as $8 from "./routes/proyectos/index.tsx";
+import * as $1 from "./routes/_500.tsx";
+import * as $2 from "./routes/_app.tsx";
+import * as $3 from "./routes/api/joke.ts";
+import * as $4 from "./routes/blog/[id].tsx";
+import * as $5 from "./routes/blog/index.tsx";
+import * as $6 from "./routes/index.tsx";
+import * as $7 from "./routes/p/[id].tsx";
+import * as $8 from "./routes/proyectos/[id].tsx";
+import * as $9 from "./routes/proyectos/index.tsx";
 import * as $$0 from "./islands/Button.tsx";
 import * as $$1 from "./islands/Counter.tsx";
 import * as $$2 from "./islands/drop-down-menu.tsx";
@@ -20,14 +21,15 @@ import * as $$3 from "./islands/toggle-button.tsx";
 const manifest = {
   routes: {
     "./routes/_404.tsx": $0,
-    "./routes/_app.tsx": $1,
-    "./routes/api/joke.ts": $2,
-    "./routes/blog/[id].tsx": $3,
-    "./routes/blog/index.tsx": $4,
-    "./routes/index.tsx": $5,
-    "./routes/p/[id].tsx": $6,
-    "./routes/proyectos/[id].tsx": $7,
-    "./routes/proyectos/index.tsx": $8,
+    "./routes/_500.tsx": $1,
+    "./routes/_app.tsx": $2,
+    "./routes/api/joke.ts": $3,
+    "./routes/blog/[id].tsx": $4,
+    "./routes/blog/index.tsx": $5,
+    "./routes/index.tsx": $6,
+    "./routes/p/[id].tsx": $7,
+    "./routes/proyectos/[id].tsx": $8,
+    "./routes/proyectos/index.tsx": $9,
   },
   islands: {
     "./islands/Button.tsx": $$0,
