@@ -1,19 +1,19 @@
-import { FunctionalComponent, JSX } from "preact";
+import { FunctionalComponent } from "preact";
 import Footer from "../Footer/Footer.tsx";
 import Navbar from "../Navbar/Navbar.tsx";
+import HeadTag from "../head.tsx";
 
-interface Props {
-  children: JSX.Element[] | JSX.Element 
-}
-
-const Layout: FunctionalComponent<Props> = ({ children }) => {
+const Layout: FunctionalComponent = ({ children }) => {
   return (
-    <div>
+    <>
+      <HeadTag />
       <Navbar />
-      {children}
+      <main className="pt-20 px-4">
+        {children}
+      </main>
       <Footer />
-    </div>
+    </>
   );
-}
+};
 
 export default Layout;

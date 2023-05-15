@@ -1,38 +1,40 @@
+import ToggleButton from "../../islands/toggle-button.tsx";
+import Menu from "../menu.tsx";
+
 const links = [
   {
-    label: "🏠",
-    to: "/",
-  },
-  {
     label: "About",
-    to: "/p/sobre-mi",
+    href: "/p/sobre-mi",
   },
   {
     label: "Articulos",
-    to: "/blog",
+    href: "/blog",
   },
   {
     label: "Proyectos",
-    to: "/proyectos",
+    href: "/proyectos",
   },
 ];
 
 function Navbar() {
   return (
-    <nav class="mb-4 p-6">
-      <ul class="flex justify-center">
-        {links.map(({ label, to }) => (
-          <li key={to}>
-            <a
-              class="p-2 text-sm font-medium transition hover:ring-2 ring-black rounded-lg w-1/4 mx-2"
-              href={to}
-            >
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <header class="fixed w-full py-2 dark:bg-[#00000000] bg-[#ffffff50] backdrop-blur-xl z-20">
+      <div class="max-w-4xl mx-auto">
+        <div className="flex px-4">
+          <a href="/" className="flex items-center">
+            <i><img src={'/favicon/negro/favicon-32x32.png'}/></i>
+            <span className="text-xl font-bold ml-2">
+              Roberto Toalongo
+            </span>
+          </a>
+          <div class="flex-1"></div>
+          <div className="flex flex-row">
+            <ToggleButton />
+            <Menu menuItems={links} />
+          </div>
+        </div>
+      </div>
+    </header>
   );
 }
 

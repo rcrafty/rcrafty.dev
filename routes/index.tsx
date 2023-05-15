@@ -1,76 +1,62 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { Post } from "../types.d.ts";
-import { listPosts } from "../utils/posts.ts";
-// import Navbar from "../components/Navbar/Navbar.tsx";
 import Layout from "../components/Layout/Layout.tsx";
-import Skill from "../components/Skill/Skill.tsx";
+import { listsHome } from "../utils/home.ts";
+import ListArticle from "../components/list-articles.tsx";
+import ListWorks from "../components/list-works.tsx";
+import Skills from "../components/list-skills.tsx";
+import LinkNext from "../components/link.tsx";
+import Social from "../components/socials.tsx";
 
 export const handler: Handlers = {
   async GET(req, context) {
-    const posts = await listPosts();
-    return context.render({ posts });
+    const lists = await listsHome();
+    return context.render({ lists });
   },
 };
 export default function Home(props: PageProps) {
-  const { data } = props;
-  const { posts } = data;
+  const { data: { lists: { posts, projects } } } = props;
   return (
-    <div class="md:mx-24 lg:mx-24 p-2">
-      <Layout>
-        <main class="grid lg:grid-cols-4 lg:grid-rows-4 lg:grid-flow-col gap-4">
-          <aside class="row-span-4 p-2">
-            <h1 class="text-4xl font-bold text-blue-600">
+    <Layout>
+      <section class="grid grid-cols-1 lg:grid-cols-4 lg:grid-flow-col gap-4 max-w-6xl mx-auto">
+        <aside class="md:row-span-3">
+          <header>
+            <div className="h-48 w-48 mb-3">
+              <img src="/foto.png" className="rounded-full flex items-center object-bottom object-cover"/>
+            </div>
+            <h1 class="text-4xl font-semibold dark:text-white">
               Roberto
               <br />
               Toalongo
-              <br />
-              <span class="text-black">
-                Full Stack <br /> Developer
-              </span>
             </h1>
-            <br />
-            <p class="text-xl text-blue-600">
-              Desarrollador en sitios webs y aplicaciones moviles
-            </p>
-          </aside>
+          </header>
+          <article class="text-base font-normal py-6 dark:text-white">
+            (Developer/Designer)
+          </article>
+          <footer>
+            <Social />
+          </footer>
+        </aside>
 
-          <section class="col-span-3">
-            <h2 class="text-xl font-bold text-blue-600 p-2">Skills</h2>
-            <Skill />
-          </section>
-
-          <section class="row-span-2 col-span-3 md:col-span-2 lg:col-span-2">
-            <h2 class="text-xl font-bold text-blue-600 p-2">
-              Últimos artículos
-            </h2>
-            {posts.map((post: Post) => (
-              <a href={`/blog/${post.id}`}>
-                <article class="rounded-lg hover:bg-blue-50 py-2 px-3 w-full">
-                  <h2 class="text-xl font-medium">{post.title}</h2>
-                  <time class="text-blue-600 text-sm">
-                    {Intl.DateTimeFormat("es", { dateStyle: "long" }).format(
-                      post.date
-                    )}
-                  </time>
-                </article>
-              </a>
-            ))}
-          </section>
-          {/*
-        <section class="row-span-2 col-span-3">
-          <h2 class="text-xl font-bold text-red-900 px-2">
-            Últimos proyectos
-          </h2>
-          <a href="">
-            <article class="rounded-lg hover:bg-amber-100 py-2 px-3">
-              <h2>Proximamente...</h2>
-            </article>
-          </a>
+        <section class="col-span-3">
+          <h2 class="text-xl font-semibold dark:text-white">Skills</h2>
+          <Skills />
         </section>
 
-          */}
-        </main>
-      </Layout>
-    </div>
+        <section class="row-span-2 col-span-3 md:col-span-2 lg:col-span-2">
+          <h2 class="text-xl font-semibold dark:text-white">
+            Últimos artículos
+          </h2>
+          <ListArticle rows={posts} max={10} />
+          <LinkNext to="blog" text="Artículos anteriores" />
+        </section>
+        <section class="row-span-2 col-span-3 md:col-span-1">
+          <h2 class="text-xl font-semibold dark:text-white">
+            Últimos proyectos
+          </h2>
+          <ListWorks rows={projects} max={5} />
+          <LinkNext to="proyectos" text="Proyectos anteriores" />
+        </section>
+      </section>
+    </Layout>
   );
 }

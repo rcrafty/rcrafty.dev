@@ -2,6 +2,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { loadPost } from "../../utils/p.ts";
 import { CSS } from "$gfm/mod.ts";
 import Layout from "../../components/Layout/Layout.tsx";
+import Markdown from "../../components/Markdown/Markdown.tsx";
 
 export const handler: Handlers = {
   async GET(request, context) {
@@ -13,22 +14,14 @@ export const handler: Handlers = {
 function PagePost(props: PageProps) {
   const { post } = props?.data || {};
   return (
-    <div class="p-2">
-      <Layout>
-        <div class="flex justify-center px-0">
-          <article class="w-[48rem]">
-            <header class="mb-6">
-              <h1 class="text-3xl font-bold">{post.title}</h1>
-            </header>
-            <style dangerouslySetInnerHTML={{ __html: CSS }} />
-            <div
-              class="markdown-body"
-              dangerouslySetInnerHTML={{ __html: post.body }}
-            />
-          </article>
-        </div>
-      </Layout>
-    </div>
+    <Layout>
+      <section class="max-w-2xl mx-auto">
+        <header class="mb-6">
+          <h1 class="text-3xl font-bold">{post.title}</h1>
+        </header>
+        <Markdown body={post.body} />
+      </section>
+    </Layout>
   );
 }
 
