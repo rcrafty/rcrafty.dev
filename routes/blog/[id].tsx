@@ -8,8 +8,6 @@ export const handler: Handlers = {
   async GET(request, context) {
     const { id } = context.params;
     const post = await loadPost(id);
-    console.log(post);
-    
     return context.render({ post });
   },
 };
