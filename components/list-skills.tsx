@@ -48,7 +48,7 @@ interface Props {
 
 function Skills() {
   return (
-    <div class="flex flex-wrap gap-3 my-4">
+    <div class="flex justify-center md:justify-start flex-wrap gap-3 my-4">
       {skills.map((skill) => <Skill {...skill} />)}
     </div>
   );

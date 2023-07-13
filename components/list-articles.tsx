@@ -10,13 +10,13 @@ interface TagImages {
   [key: string]: string;
 }
 
-export const TAGS_IMAGES_DEFAULT = '/tags/brain.svg'
+export const TAGS_IMAGES_DEFAULT = "/tags/brain.svg";
 export const TAGS_IMAGES: TagImages = {
   node: "/tags/node.svg",
   brain: "/tags/brain.svg",
   react: "/tags/react.svg",
   java: "/tags/java.svg",
-  kotlin: "/tags/kotlin.svg"
+  kotlin: "/tags/kotlin.svg",
 };
 
 const ListArticle: FunctionComponent<Props> = ({ rows, max }) => {
@@ -29,16 +29,16 @@ const ListArticle: FunctionComponent<Props> = ({ rows, max }) => {
 };
 
 const Article = ({ id, title, date, tags }: Post) => {
-  const nameTag = tags[0]
-  const tag = TAGS_IMAGES[nameTag] || TAGS_IMAGES_DEFAULT
+  const nameTag = tags[0];
+  const tag = TAGS_IMAGES[nameTag] || TAGS_IMAGES_DEFAULT;
   return (
     <a href={`/blog/${id}`}>
       <article class="flex flex-row rounded-lg shadow-md dark:bg-[#ffffff10] dark:shadow-2xl bg-whipacity py-3 px-2 gap-4 my-4 w-full">
         <div class="flex items-center justify-center">
-          <img src={tag} alt='tag' width={50}  height={50} />
+          <img src={tag} alt="tag" width={50} height={50} />
         </div>
         <div>
-          <h2 class="font-medium dark:text-white">{title}</h2>
+          <h2 class="font-medium dark:text-white leading-5">{title}</h2>
           <time class="font-light text-xs">
             {Intl.DateTimeFormat("es", { dateStyle: "long" }).format(
               date,
