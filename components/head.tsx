@@ -20,9 +20,9 @@ const HeadTag = () => {
         content={desc}
       />
       <meta property='og:type' content={defaultOgType} />
-      <link rel="icon" href="/favicon/negro/favicon.ico" type="image/x-icon" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/negro/apple-icon-180x180.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon/negro/favicon-32x32.png" />
+      <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" sizes="16x16" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
       <link rel="stylesheet" href="/styles/styles.css" />
       <script id='theme' src='/scripts/theme.js' />
     </Head>

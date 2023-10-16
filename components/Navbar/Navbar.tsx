@@ -1,6 +1,7 @@
 import ToggleButton from "../../islands/toggle-button.tsx";
 import Menu from "../menu.tsx";
-
+import { Logo } from "../Icons/Logo.tsx";
+// <i><img src={'/favicon/negro/favicon-32x32.png'}/></i>
 const links = [
   {
     label: "About",
@@ -22,7 +23,9 @@ function Navbar() {
       <div class="max-w-4xl mx-auto">
         <div className="flex px-4">
           <a href="/" className="flex items-center">
-            <i><img src={'/favicon/negro/favicon-32x32.png'}/></i>
+            <div class="w-10">
+              <Logo class="fill-current"/>
+            </div>
             <span className="text-xl font-bold ml-2">
               Roberto Toalongo
             </span>
