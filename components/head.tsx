@@ -18,12 +18,7 @@ const HeadTag = () => {
       />
       <meta property="og:description" content={desc} />
       <meta property="og:type" content={defaultOgType} />
-      <link
-        rel="icon"
-        href="/favicon/favicon.ico"
-        type="image/x-icon"
-        sizes="96x96"
-      />
+      <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -32,8 +27,14 @@ const HeadTag = () => {
       <link
         rel="icon"
         type="image/png"
+        sizes="32x32"
+        href="/favicon/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
         sizes="16x16"
-        href="/favicon/favicon-96x96.png"
+        href="/favicon/favicon-16x16.png"
       />
       <link rel="stylesheet" href="/styles/styles.css" />
       <script id="theme" src="/scripts/theme.js" />
