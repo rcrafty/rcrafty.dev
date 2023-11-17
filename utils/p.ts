@@ -1,4 +1,4 @@
-import { extract } from "$std/encoding/front_matter/any.ts";
+import { extract } from "$std/front_matter/any.ts";
 import { P } from "../types.d.ts";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
@@ -14,7 +14,7 @@ export async function loadPost(id: string): Promise<P | null> {
   const { attrs, body } = extract(raw);
   const params = attrs as Record<string, string>;
 
-const file = await unified()
+  const file = await unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype)

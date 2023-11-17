@@ -1,5 +1,5 @@
 import type { Post } from "../types.d.ts";
-import { extract } from "$std/encoding/front_matter/any.ts";
+import { extract } from "$std/front_matter/any.ts";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
