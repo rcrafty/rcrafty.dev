@@ -6,7 +6,7 @@ import ListWorks from "../components/list-works.tsx";
 import Skills from "../components/list-skills.tsx";
 import LinkNext from "../components/link.tsx";
 import Social from "../components/socials.tsx";
-import {Logo} from "../components/Icons/Logo.tsx";
+import { Logo } from "../components/Icons/Logo.tsx";
 
 export const handler: Handlers = {
   async GET(req, context) {
@@ -15,11 +15,15 @@ export const handler: Handlers = {
   },
 };
 export default function Home(props: PageProps) {
-  const { data: { lists: { posts, projects } } } = props;
+  const {
+    data: {
+      lists: { posts, projects },
+    },
+  } = props;
   return (
     <Layout>
-      <section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 lg:grid-flow-col gap-4 max-w-6xl mx-auto">
-        <aside class="mx-auto md:mx-0 col-span-1 lg:row-span-3">
+      <section class="flex justify-center flex-col md:grid md:grid-cols-3 lg:grid-cols-4 lg:grid-flow-col gap-4 max-w-6xl mx-auto">
+        <aside class="mx-auto md:mx-0 lg:row-span-3">
           <header>
             <div className="h-48 w-48 mb-3 dark:bg-[#ffffff10] bg-whipacity dark:bg-black rounded-full">
               <div className="p-4">
@@ -32,7 +36,7 @@ export default function Home(props: PageProps) {
               Toalongo
             </h1>
           </header>
-          <article class="flex justify-center text-center md:text-left md:block text-base font-normal py-6 dark:text-white">
+          <article class="text-center md:text-left md:block-base font-normal py-6 dark:text-white">
             (Developer/Designer)
           </article>
           <footer class="flex justify-center md:block">
