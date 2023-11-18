@@ -4,7 +4,7 @@ const HeadTag = () => {
   const descripcion =
     "Artículos y tutoriales especializados en Frontend, Backend y rendimiento web. Potencia tu proyecto digital con nuestras recomendaciones. ¡Embárcate en el viaje hacia la excelencia en el desarrollo web!";
   const title =
-    "Berht 🍐 | Más Allá del Código: Buenas Prácticas en Desarrollo Web";
+    "Roberto Toalongo 🍐 | Más Allá del Código: Buenas Prácticas en Desarrollo Web";
 
   return (
     <Head>
@@ -14,9 +14,9 @@ const HeadTag = () => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={descripcion} />
       <meta property="og:type" content="website" />
-      {/* <meta property="og:url" content="https://berht.dev" >*/}
-      <meta property="og:site_name" content="Berht" />
-      <meta name="author" content="Roberto Toalongo" />
+      {/* <meta property="og:url" content="https://rcrafty.dev" >*/}
+      <meta property="og:site_name" content="Roberto Toalongo" />
+      <meta name="author" content="rcrafty" />
       <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
       <link
         rel="apple-touch-icon"
