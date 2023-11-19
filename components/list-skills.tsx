@@ -58,7 +58,7 @@ function Skill({ source, skill }: Props) {
   return (
     <div className="flex flex-row shadow-md items-center dark:bg-[#ffffff10] dark:shadow-2xl bg-whipacity rounded-lg flex-row">
       <i className="p-2">
-        <img class="w-8" src={source} alt="css-logo" />
+        <img width={32} height={32} src={source} alt="css-logo" />
       </i>
       <span className="text-sm mr-4 leading-normal">
         <h3 className="font-bold dark:text-white">{skill}</h3>
