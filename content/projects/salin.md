@@ -1,7 +1,7 @@
 ---
 title: SALIN(Sistema de Apoyo en el Lenguaje de Ingles para Niños)
 date: 2022-12-12
-image: salin/logo.webp
+image: salin/logo
 excerpt: This is my first post
 ---
 

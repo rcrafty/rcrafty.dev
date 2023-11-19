@@ -1,7 +1,7 @@
 ---
 title: E-commerce Hamburguesas del rodeo
 date: 2023-05-07
-image: e-commerce-el-rodeo/home.webp
+image: e-commerce-el-rodeo/home
 excerpt: This is my first post
 ---
 

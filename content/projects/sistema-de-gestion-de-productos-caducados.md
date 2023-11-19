@@ -1,7 +1,7 @@
 ---
 title: Sistema de gestion de productos caducados
 date: 2021-02-12
-image: sgpc/sgpc-home.webp
+image: sgpc/sgpc-home
 excerpt: This is my first post
 ---
 
