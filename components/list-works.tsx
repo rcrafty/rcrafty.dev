@@ -25,6 +25,8 @@ const Works = ({ id, image, title }: Project) => {
               src={`/projects/${image}.webp`}
               className="rounded-lg cover my-1"
               alt={image}
+              width="1440"
+              height="720"
             />
           </picture>
           <h2 class="font-medium mt-2 leading-normal dark:text-white">
