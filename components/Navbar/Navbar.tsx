@@ -24,7 +24,7 @@ function Navbar() {
         <div className="flex px-4">
           <a href="/" className="flex items-center">
             <div class="w-10">
-              <Logo class="fill-current"/>
+              <Logo />
             </div>
             <span className="text-xl font-bold ml-2">
               Roberto Toalongo
