@@ -25,28 +25,30 @@ const ListArticle: FunctionComponent<Props> = ({ rows, max }) => {
       {...post}
     />
   ));
-  return <ol>{articles}</ol>;
+  return <ul className="mx-0">{articles}</ul>;
 };
 
 const Article = ({ id, title, date, tags }: Post) => {
   const nameTag = tags[0];
   const tag = TAGS_IMAGES[nameTag] || TAGS_IMAGES_DEFAULT;
   return (
-    <a href={`/blog/${id}`}>
-      <article class="flex flex-row rounded-lg shadow-md dark:bg-[#ffffff10] dark:shadow-2xl bg-whipacity py-3 px-2 gap-4 my-4 w-full">
-        <div class="flex items-center justify-center">
-          <img src={tag} alt="tag" width={50} height={50} />
-        </div>
-        <div>
-          <h2 class="font-medium dark:text-white leading-5">{title}</h2>
-          <time class="font-light text-xs">
-            {Intl.DateTimeFormat("es", { dateStyle: "long" }).format(
-              date,
-            )}
-          </time>
-        </div>
-      </article>
-    </a>
+    <li className="list-none">
+      <a href={`/blog/${id}`}>
+        <article class="flex flex-row rounded-lg shadow-md dark:bg-[#ffffff10] dark:shadow-2xl bg-whipacity py-3 px-2 gap-4 my-4 w-full">
+          <div class="flex items-center justify-center">
+            <img src={tag} alt="tag" width={50} height={50} />
+          </div>
+          <div>
+            <h2 class="font-medium dark:text-white leading-5">{title}</h2>
+            <time class="font-light text-xs">
+              {Intl.DateTimeFormat("es", { dateStyle: "long" }).format(
+                date,
+              )}
+            </time>
+          </div>
+        </article>
+      </a>
+    </li>
   );
 };
 

@@ -10,25 +10,29 @@ const ListWorks: FunctionalComponent<Props> = ({ rows, max }) => {
     <Works {...project} />
   ));
   return max < 10
-    ? <ol>{projects}</ol>
-    : <ol class="grid grid-cols-1 md:grid-cols-2 gap-4">{projects}</ol>;
+    ? <ul class="mx-0">{projects}</ul>
+    : <ul class="mx-0 grid grid-cols-1 md:grid-cols-2 gap-4">{projects}</ul>;
 };
 
 const Works = ({ id, image, title }: Project) => {
   return (
-    <a href={`/proyectos/${id}`}>
-      <article class="rounded-lg shadow-md dark:bg-[#ffffff10] dark:shadow-2xl bg-whipacity py-2 px-3 my-4 w-full">
-        <picture>
-          <source srcset={`/projects/${image}.avif`} type="image/avif" />
-          <img
-            src={`/projects/${image}.webp`}
-            className="rounded-lg cover my-1"
-            alt={image}
-          />
-        </picture>
-        <h2 class="font-medium mt-2 leading-normal dark:text-white">{title}</h2>
-      </article>
-    </a>
+    <li class="list-none">
+      <a href={`/proyectos/${id}`}>
+        <article class="rounded-lg shadow-md dark:bg-[#ffffff10] dark:shadow-2xl bg-whipacity py-2 px-3 my-4 w-full">
+          <picture>
+            <source srcset={`/projects/${image}.avif`} type="image/avif" />
+            <img
+              src={`/projects/${image}.webp`}
+              className="rounded-lg cover my-1"
+              alt={image}
+            />
+          </picture>
+          <h2 class="font-medium mt-2 leading-normal dark:text-white">
+            {title}
+          </h2>
+        </article>
+      </a>
+    </li>
   );
 };
 export default ListWorks;
