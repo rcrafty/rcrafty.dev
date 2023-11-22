@@ -1,4 +1,3 @@
-import Layout from "../../components/Layout/Layout.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { Project } from "../../types.d.ts";
 import { listProjects } from "../../utils/projects.ts";
@@ -11,16 +10,14 @@ export const handler: Handlers = {
   },
 };
 function Project(props: PageProps) {
-  const { data: {projects} } = props;
+  const { data: { projects } } = props;
   return (
-    <Layout>
-      <section class="max-w-2xl mx-auto">
-        <h2 class="text-xl font-semibold">
-          Últimos proyectos
-        </h2>
-        <ListWorks rows={projects} max={100}/>
-      </section>
-    </Layout>
+    <section class="max-w-2xl mx-auto">
+      <h2 class="text-xl font-semibold">
+        Últimos proyectos
+      </h2>
+      <ListWorks rows={projects} max={100} />
+    </section>
   );
 }
 

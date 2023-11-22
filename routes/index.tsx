@@ -1,5 +1,4 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
-import Layout from "../components/Layout/Layout.tsx";
 import { listsHome } from "../utils/home.ts";
 import ListArticle from "../components/list-articles.tsx";
 import ListWorks from "../components/list-works.tsx";
@@ -21,49 +20,47 @@ export default function Home(props: PageProps) {
     },
   } = props;
   return (
-    <Layout>
-      <section class="flex justify-center flex-col md:grid md:grid-cols-3 lg:grid-cols-4 lg:grid-flow-col gap-4 max-w-6xl mx-auto">
-        <aside class="mx-auto md:mx-0 lg:row-span-3">
-          <header>
-            <div className="h-48 w-48 mb-3 dark:bg-[#ffffff10] bg-whipacity dark:bg-black rounded-full">
-              <div className="p-4">
-                <Logo />
-              </div>
+    <section class="flex justify-center flex-col md:grid md:grid-cols-3 lg:grid-cols-4 lg:grid-flow-col gap-4 max-w-6xl mx-auto">
+      <aside class="mx-auto md:mx-0 lg:row-span-3">
+        <header>
+          <div className="h-48 w-48 mb-3 dark:bg-[#ffffff10] bg-whipacity dark:bg-black rounded-full">
+            <div className="p-4">
+              <Logo />
             </div>
-            <h1 class="flex justify-center text-center md:text-left md:block text-4xl font-semibold dark:text-white">
-              Roberto
-              <br />
-              Toalongo
-            </h1>
-          </header>
-          <article class="text-center md:text-left md:block-base font-normal py-6 dark:text-white">
-            (Developer/Designer)
-          </article>
-          <footer class="flex justify-center md:block">
-            <Social />
-          </footer>
-        </aside>
+          </div>
+          <h1 class="flex justify-center text-center md:text-left md:block text-4xl font-semibold dark:text-white">
+            Roberto
+            <br />
+            Toalongo
+          </h1>
+        </header>
+        <article class="text-center md:text-left md:block-base font-normal py-6 dark:text-white">
+          (Developer/Designer)
+        </article>
+        <footer class="flex justify-center md:block">
+          <Social />
+        </footer>
+      </aside>
 
-        <section class="col-span-3 md:col-span-2 lg:col-span-3">
-          <h2 class="text-xl font-semibold dark:text-white">Skills</h2>
-          <Skills />
-        </section>
-
-        <section class="col-span-3 md:col-span-2 lg:col-span-2">
-          <h2 class="text-xl font-semibold dark:text-white">
-            Últimos artículos
-          </h2>
-          <ListArticle rows={posts} max={10} />
-          <LinkNext to="blog" text="Artículos anteriores" />
-        </section>
-        <section class="row-span-2 col-span-3 md:col-span-1">
-          <h2 class="text-xl font-semibold dark:text-white">
-            Últimos proyectos
-          </h2>
-          <ListWorks rows={projects} max={5} />
-          <LinkNext to="proyectos" text="Proyectos anteriores" />
-        </section>
+      <section class="col-span-3 md:col-span-2 lg:col-span-3">
+        <h2 class="text-xl font-semibold dark:text-white">Skills</h2>
+        <Skills />
       </section>
-    </Layout>
+
+      <section class="col-span-3 md:col-span-2 lg:col-span-2">
+        <h2 class="text-xl font-semibold dark:text-white">
+          Últimos artículos
+        </h2>
+        <ListArticle rows={posts} max={10} />
+        <LinkNext to="blog" text="Artículos anteriores" />
+      </section>
+      <section class="row-span-2 col-span-3 md:col-span-1">
+        <h2 class="text-xl font-semibold dark:text-white">
+          Últimos proyectos
+        </h2>
+        <ListWorks rows={projects} max={5} />
+        <LinkNext to="proyectos" text="Proyectos anteriores" />
+      </section>
+    </section>
   );
 }

@@ -1,22 +1,17 @@
 import { Head } from "$fresh/runtime.ts";
 
-const HeadTag = () => {
-  const descripcion =
-    "Artículos y tutoriales especializados en Frontend, Backend y rendimiento web. Potencia tu proyecto digital con nuestras recomendaciones. ¡Embárcate en el viaje hacia la excelencia en el desarrollo web!";
-  const title =
-    "Roberto Toalongo 🍐 | Más Allá del Código: Buenas Prácticas en Desarrollo Web";
-
+const BaseHead = ({ title, description }) => {
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content={descripcion} />
+      <meta name="description" content={description} />
       <meta property="og:locale" content="es_ES" />
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={descripcion} />
+      <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      {/* <meta property="og:url" content="https://rcrafty.dev" >*/}
+      {/* <meta property="og:url" content="https://rcraftzy.dev" >*/}
       <meta property="og:site_name" content="Roberto Toalongo" />
-      <meta name="author" content="rcrafty" />
+      <meta name="author" content="rcraftzy" />
       <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
       <link
         rel="apple-touch-icon"
@@ -40,5 +35,4 @@ const HeadTag = () => {
     </Head>
   );
 };
-
-export default HeadTag;
+export default BaseHead;
