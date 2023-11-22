@@ -7,7 +7,7 @@ export default function App({ Component }: AppProps) {
   const title =
     "Roberto Toalongo 🍐 | Más Allá del Código: Buenas Prácticas en Desarrollo Web";
   return (
-    <html>
+    <html lang="es">
       <head>
         <BaseHead title={title} description={description} />
       </head>
