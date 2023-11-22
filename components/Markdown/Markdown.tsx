@@ -6,8 +6,7 @@ interface Props {
 const Markdown: FunctionComponent<Props> = ({ body }) => (
   <div>
     <div
-      style="text-align: justify; hyphens: auto"
-      className="prose markdown-body dark:text-white"
+      className="prose markdown-body markdown"
       dangerouslySetInnerHTML={{ __html: body }}
     />
   </div>

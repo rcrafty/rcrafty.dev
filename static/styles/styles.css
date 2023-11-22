@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 :root {
@@ -25,32 +26,43 @@ body {
   background-color: #a5a5a5;
 }
 
-.dark a {
+.dark .prose a {
   --tw-text-opacity: 1;
   color: #fff;
-  color: rgba(255,255,255,var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-.dark strong {
+.dark .prose strong {
   --tw-text-opacity: 1;
   color: #fff;
-  color: rgba(255,255,255,var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-li {
+.prose li {
+  color: #000;
   list-style: disc;
   padding: 0 0 0 5px;
 }
-.prose ul > li {
+.dark .prose li {
+  color: #fff;
+  list-style: disc;
+  padding: 0 0 0 5px;
+}
+.markdown.prose ul > li {
   padding-left: 0.5em;
 }
 
-ul {
-margin: 0 0 0 20px;
-padding: 0;
+.prose ul {
+  margin: 0 0 0 20px;
+  padding: 0;
 }
 
-li:last-child {
+.prose li:last-child {
   border-bottom: none;
   padding-bottom: 0;
+}
+
+.markdown.prose p {
+  text-align: justify;
+  hyphens: auto;
 }
