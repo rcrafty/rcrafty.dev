@@ -18,6 +18,7 @@ export async function loadPost(id: string): Promise<Post | null> {
     .use(remarkGfm)
     .use(remarkRehype)
     .use(rehypeStringify)
+    .use(rehypeStringify)
     .process(body);
 
   const post: Post = {
