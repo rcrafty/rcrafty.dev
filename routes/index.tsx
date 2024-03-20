@@ -20,7 +20,7 @@ export default function Home(props: PageProps) {
     },
   } = props;
   return (
-    <section class="flex justify-center flex-col md:grid md:grid-cols-3 lg:grid-cols-4 lg:grid-flow-col gap-4 max-w-6xl mx-auto">
+    <section class="flex justify-between flex-col md:grid md:grid-cols-3 lg:grid-cols-4 lg:grid-flow-col gap-4 max-w-6xl mx-auto">
       <aside class="mx-auto md:mx-0 lg:row-span-3">
         <header>
           <div className="h-48 w-48 mb-3 dark:bg-[#ffffff10] bg-whipacity dark:bg-black rounded-full">
